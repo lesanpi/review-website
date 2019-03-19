@@ -1,0 +1,253 @@
+body{
+	margin: 0;
+	background: #F2F4F8;
+	overflow-x: hidden;
+	font-family: sans-serif;
+}
+.header{
+	width: 100vw;
+	height: 60px;
+	background: transparent; /* #43db9e;*/
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	
+
+	display: grid;
+	grid-template-columns: 100px 1fr 50px;
+	overflow: hidden;
+	align-content: center;
+
+}
+.logo{
+	width: 80px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 5px;
+}
+.logo img{
+	width: 40px;
+	height: 40px;
+}
+.categorias{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	fill: white;
+}
+.categorias svg{
+	cursor: pointer;
+	margin: 0 15px;
+	fill: white;
+}
+.redes-sociales{
+
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	
+
+}
+.red-social{
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	margin: 0px 15px;
+}
+.red-social img{
+	width: 100%;
+}
+.main-image{
+	background-color:#3eb6d1; /*#43db9e;*/
+	height: 400px;
+	width: 100vw;
+	box-shadow: 1px 1px 1px 2px rgba(70, 70, 70, .4);
+}
+.container{
+	display: grid;
+	width: 100vw;
+	overflow-y: auto;
+	grid-template-columns: 300px 1fr 300px;
+	grid-template-rows: 1fr;
+	grid-area: "left central right";
+	justify-content: center;
+}
+.left{
+	grid-area: "left";
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	align-content: center;
+	align-items: center;
+	padding-top: 50px;
+
+}
+.central{
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	padding-left: 0;
+	grid-area: "central";
+}
+.right{
+	grid-area: "right";
+}
+.active-category{
+	height: 200px;
+	width: 200px;
+	border-radius: 20px;
+	background-color: white;
+	box-shadow: 0px 0px 0px 1px rgba(70, 70, 70, .4);
+	margin-top: 10px;
+}
+.category-item{
+	height: 50px;
+	width: 200px;
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: 0px 0px 0px 1px rgba(70, 70, 70, .4);
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.post{
+	background-color: white;
+	width: 550px;
+	height: 687.5px;
+	border: 1px solid #cecece;
+	display: grid;
+	margin-top: 15px;
+	grid-template-rows: 40px auto 1fr 40px;
+
+	justify-items:center;
+
+}
+.post .information{
+	box-shadow: 0px 0px 0px .1px rgba(70, 70, 70, .4);
+	height: 40px;
+	width: 100%;
+	display: grid;
+	color: rgba(0, 0, 0, 0.3);
+	grid-template-columns: 200px 1fr 100px;
+	align-content: center;
+
+}
+.information .date{
+	padding: 5px;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+.information .category{
+	display: flex;
+	align-items: center;
+}
+.category .category-name{
+	font-size: 13px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	
+}
+.title{
+	height: auto;
+	display: block;
+}
+.title h3{
+	color: #263238;
+	width: 100%;
+	height: 100%;
+	padding: 0 10px;
+	font-size: 1.5em;
+	font-weight: 100;
+	margin: 15px 0;
+	text-align: left;
+	
+}
+.post .image img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.post .share{
+	width: 100%;
+	display: flex;
+	color: rgba(0, 0, 0, 0.3);
+
+}
+.post .share p {
+
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@media screen and (max-width: 1100px){
+	.container{
+		display: grid;
+		width: 100vw;
+		overflow-y: auto;
+		grid-template-columns: 300px 1fr;
+		grid-template-rows: 1fr;
+		grid-area: "left central";
+		justify-content: center;
+	}
+}
+@media screen and (max-width: 768px){
+	.container{
+		display: grid;
+		width: 100vw;
+		overflow-y: auto;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		grid-area: ". central central";
+		justify-content: center;
+		align-items: center;
+	}
+	.post{
+		
+		width: 100vw;
+		height: 687.5px;
+		
+	}	
+	.left{
+		grid-area: "left";
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding-top: 0px;
+	}
+	.central{
+		padding-top: 0;
+	}
+	.active-category{
+		height: 50px;
+		width: 50px;
+		border-radius: 10px;
+		background-color: white;
+		box-shadow: 0px 0px 0px 1px rgba(70, 70, 70, .4);
+		margin-top: 20px;
+		margin-right: 10px;
+
+	}
+	.category-item{
+		height: 50px;
+		width: 50px;
+		border-radius: 10px;
+		background-color: white;
+		box-shadow: 0px 0px 0px 1px rgba(70, 70, 70, .4);
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 10px;
+	}
+}
