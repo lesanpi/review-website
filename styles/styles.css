@@ -93,7 +93,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
-	padding-left: 0;
+	align-items: center;
 	grid-area: "central";
 }
 .right{
@@ -199,9 +199,15 @@ body{
 		grid-template-rows: 1fr;
 		grid-area: "left central";
 		justify-content: center;
+		
 	}
+	.central{
+		padding-left : 0;
+		padding-right: 0;
+	}
+	
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 850px){
 	.container{
 		display: grid;
 		width: 100vw;
@@ -227,6 +233,8 @@ body{
 	}
 	.central{
 		padding-top: 0;
+		padding-right: 0;
+		padding-left: 0;
 	}
 	.active-category{
 		height: 50px;
