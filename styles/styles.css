@@ -16,7 +16,7 @@ body{
 	
 
 	display: grid;
-	grid-template-columns: 100px 1fr 50px;
+	grid-template-columns: 100px 1fr 10px;
 	overflow: hidden;
 	align-content: center;
 
@@ -33,6 +33,15 @@ body{
 .logo img{
 	width: 40px;
 	height: 40px;
+}
+.redes-sociales span{
+	
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin: 0 5%;
 }
 .categorias{
 	display: flex;
@@ -77,6 +86,7 @@ body{
 	grid-template-rows: 1fr;
 	grid-area: "left central right";
 	justify-content: center;
+	overflow-x: hidden;
 }
 .left{
 	grid-area: "left";
@@ -98,13 +108,17 @@ body{
 }
 .right{
 	grid-area: "right";
+	background-color: rgba(0,0,0,0.1);
+}
+.active-category, .category-item{
+	cursor: pointer;
 }
 .active-category{
 	height: 200px;
 	width: 200px;
 	border-radius: 20px;
 	background-color: white;
-	box-shadow: 0px 0px 0px 1px rgba(70, 70, 70, .4);
+	box-shadow: 0px 0px 0px 1px rgba(70, 70, 70, .2);
 	margin-top: 10px;
 }
 .category-item{
@@ -112,8 +126,8 @@ body{
 	width: 200px;
 	border-radius: 10px;
 	background-color: white;
-	box-shadow: 0px 0px 0px 1px rgba(70, 70, 70, .4);
-	margin-top: 20px;
+	box-shadow: 0px 0px 0px 1px rgba(70, 70, 70, .2);
+	margin-top: 10px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -121,11 +135,11 @@ body{
 .post{
 	background-color: white;
 	width: 550px;
-	height: 687.5px;
+	height: auto;
 	border: 1px solid #cecece;
 	display: grid;
 	margin-top: 15px;
-	grid-template-rows: 40px auto 1fr 40px;
+	grid-template-rows: 40px auto 687.5px auto;
 
 	justify-items:center;
 
@@ -158,15 +172,19 @@ body{
 .title{
 	height: auto;
 	display: block;
+	width: 100%;
+	
+	
 }
 .title h3{
 	color: #263238;
-	width: 100%;
+	width: 90%;
 	height: 100%;
-	padding: 0 10px;
 	font-size: 1.5em;
 	font-weight: 100;
 	margin: 15px 0;
+	margin-left: 20px;
+	margin-right: 20px;
 	text-align: left;
 	
 }
@@ -186,9 +204,16 @@ body{
 	width: 100%;
 	height: 100%;
 	margin: 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.footer{
+	background-color: rgba(30,30,30,0.9); /*#3eb6d1;*/
+	height: 70px;
+	width: 100vw;
 }
 @media screen and (max-width: 1100px){
 	.container{
@@ -205,9 +230,21 @@ body{
 		padding-left : 0;
 		padding-right: 0;
 	}
-	
+	.post{
+		background-color: white;
+		width: 550px;
+		height: auto;
+		border: 1px solid #cecece;
+		display: grid;
+		margin-top: 15px;
+		grid-template-rows: 40px auto 500px auto;
+
+		justify-items:center;
+
+	}
 }
-@media screen and (max-width: 850px){
+
+@media screen and (max-width: 770px){
 	.container{
 		display: grid;
 		width: 100vw;
@@ -221,7 +258,6 @@ body{
 	.post{
 		
 		width: 100vw;
-		height: 687.5px;
 		
 	}	
 	.left{
@@ -230,6 +266,11 @@ body{
 		flex-direction: row;
 		justify-content: center;
 		padding-top: 0px;
+	}
+	#left{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
 	}
 	.central{
 		padding-top: 0;
