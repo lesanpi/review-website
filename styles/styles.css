@@ -6,29 +6,30 @@ body{
 }
 .header{
 	width: 100vw;
-	height: 60px;
+	height: 50px;
 	background: transparent; /* #43db9e;*/
 
 	position: fixed;
 	top: 0;
 	left: 0;
 
-	
+	z-index: 1000;
 
 	display: grid;
-	grid-template-columns: 100px 1fr 10px;
+	grid-template-columns: 100px 1fr 20px;
 	overflow: hidden;
 	align-content: center;
 
 }
 .logo{
 	width: 80px;
-	height: 40px;
+	height: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	padding: 5px;
+	background: #3eb6d1;
 }
 .logo img{
 	width: 40px;
@@ -77,6 +78,11 @@ body{
 	height: 400px;
 	width: 100vw;
 	box-shadow: 1px 1px 1px 2px rgba(70, 70, 70, .4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	padding: 0 20px;
 }
 .container{
 	display: grid;
@@ -87,6 +93,7 @@ body{
 	grid-area: "left central right";
 	justify-content: center;
 	overflow-x: hidden;
+	
 }
 .left{
 	grid-area: "left";
@@ -112,12 +119,13 @@ body{
 }
 .active-category, .category-item{
 	cursor: pointer;
+
 }
 .active-category{
 	height: 200px;
 	width: 200px;
 	border-radius: 20px;
-	background-color: white;
+	
 	box-shadow: 0px 0px 0px 1px rgba(70, 70, 70, .2);
 	margin-top: 10px;
 }
@@ -125,7 +133,7 @@ body{
 	height: 50px;
 	width: 200px;
 	border-radius: 10px;
-	background-color: white;
+	
 	box-shadow: 0px 0px 0px 1px rgba(70, 70, 70, .2);
 	margin-top: 10px;
 	display: flex;
@@ -197,8 +205,42 @@ body{
 	width: 100%;
 	display: flex;
 	color: rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+	position: relative;
 
 }
+.share-list{
+	background: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	position: absolute;
+	top: -125px;
+	left: 25px;
+	z-index: 100;
+	box-shadow: 0px 0px 0px;
+	visibility: hidden; 
+}
+.share-list ul{
+	padding: 10px;
+	margin: 0;
+}
+.share-list ul a{
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.3);
+
+}
+.share-list ul li{
+	text-decoration: none;
+	list-style: none;
+	margin: 10px;
+}
+.visible{
+	visibility: visible;	
+}
+
 .post .share p {
 
 	width: 100%;
@@ -247,13 +289,15 @@ body{
 @media screen and (max-width: 770px){
 	.container{
 		display: grid;
-		width: 100vw;
+		width: auto;
 		overflow-y: auto;
-		grid-template-columns: 1fr;
+		grid-template-columns: auto;
 		grid-template-rows: 1fr;
-		grid-area: ". central central";
+		grid-area: "central";
 		justify-content: center;
 		align-items: center;
+		margin: 0;
+		padding: 0;
 	}
 	.post{
 		
