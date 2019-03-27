@@ -70,9 +70,9 @@
 		display: grid;
 		width: 100vw;
 		overflow-y: auto;
-		grid-template-columns: 300px 1fr;
+		grid-template-columns: 1fr 250px;
 		grid-template-rows: 1fr;
-		grid-area: "left central";
+		grid-area: "central right";
 		justify-content: center;
 		
 	}
@@ -101,7 +101,7 @@
 		overflow-y: auto;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
-		grid-area: ". central central";
+		grid-area: "central";
 		justify-content: center;
 		align-items: center;
 	}
@@ -111,16 +111,10 @@
 		
 	}	
 	.left{
-		grid-area: "left";
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		padding-top: 0px;
+		display: none;
 	}
 	#left{
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
+		display: none;
 	}
 	.central{
 		padding-top: 0;
